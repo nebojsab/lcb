@@ -1,3 +1,9 @@
+.sidenav.hidden-xs {
+    @include breakpoint(xs) {
+        padding: 0 20px;
+    }
+}
+
 .panel-title {
     position: relative;
     padding: 6px 0;

@@ -10,9 +10,75 @@ a:hover {
 }
 /* navigation */
 
-// .bg-light {
-//     background-color: #c0c1c4 !important;
-// }
+@media (min-width: 991px) {
+    .navbar-expand-sm .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+}
+
+.container-fluid.bg-light .row {
+    @include breakpoint(sm) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+
+        .col-sm-5.text-center {
+            width: 100% !important;
+            max-width: unset;
+        }
+
+        .col-sm-7.text-center {
+            width: 100% !important;
+            max-width: unset;
+        }
+    }
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+
+        .col-sm-5.text-center {
+            width: 100% !important;
+            max-width: unset;
+        }
+
+        .col-sm-7.text-center {
+            width: 100% !important;
+            max-width: unset;
+        }
+    }
+}
+
+.nav {
+    flex-direction: row-reverse;
+
+    @include breakpoint(xs) {
+        flex-direction: row;
+    }
+}
+
+.navbar .navbar-nav {
+    display: flex !important;
+    text-align: left;
+}
+
+body .navbar-toggler {
+    margin: 0 !important;
+}
+
+.navbar-collapse.collapse.show {
+    padding: 0;
+    margin: 20px 0;
+
+    .form-inline {
+        margin-top: 20px;
+    }
+}
+
 .navbar-expand-sm .navbar-collapse {
     padding: 0 2%;
 }
@@ -169,6 +235,10 @@ a:hover {
 
     h2 {
         color: #fff;
+
+        @include breakpoint(xs) {
+            text-align: center !important;
+        }
     }
 }
 
@@ -181,12 +251,23 @@ a:hover {
     }
 }
 
+.col-sm-2 img[alt="flag"] {
+    @include breakpoint(xs) {
+        margin-top: 28px;
+    }
+}
+
 .btn-group-lg > .btn,
 .btn-lg {
     padding: 0.3rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.3rem;
+
+    @include breakpoint(xs) {
+        max-width: 150px;
+        margin: 0 auto;
+    }
 }
 
 //news ticker
