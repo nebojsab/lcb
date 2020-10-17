@@ -1,0 +1,32 @@
+.blognews {
+    padding: 2%;
+    border: none;
+
+    .thumbnail {
+        img {
+            border-radius: 6px;
+        }
+
+        h5 {
+            color: #444;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 1.6;
+        }
+
+        .blog__text {
+            color: #333;
+            font-size: 14px;
+        }
+
+        .blog__date {
+            color: #c1c1c1;
+            font-size: 12px;
+        }
+
+        a {
+            font-size: 14px;
+        }
+    }
+}

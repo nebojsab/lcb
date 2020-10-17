@@ -1,0 +1,259 @@
+body {
+    background-color: #f5f5f5;
+    font-family: "Lato", sans-serif;
+}
+a:link {
+    color: #76797c;
+}
+a:hover {
+    text-decoration: none;
+}
+/* navigation */
+
+// .bg-light {
+//     background-color: #c0c1c4 !important;
+// }
+.navbar-expand-sm .navbar-collapse {
+    padding: 0 2%;
+}
+.logoright {
+    padding-top: 5%;
+}
+.mainnav:hover,
+.minnav:focus {
+    border-bottom: 2px solid #00aeef;
+    color: #00aeef;
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #00aeef;
+}
+.nav-link {
+    font-size: 14px;
+}
+.navbar-toggler {
+    position: relative;
+    margin: 0 auto !important;
+}
+.abovenav {
+    background-color: #121424;
+    padding: 10px 5%;
+}
+
+.simple-subscription-form {
+    color: #fefefe;
+    border-radius: 0;
+}
+
+.simple-subscription-form .button {
+    border-radius: 0 0 0 0 !important;
+    background-color: #2b8a3e;
+    color: #ffffff;
+    border: none;
+    height: 30px;
+}
+.newcol {
+    color: #ffffff;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+    align-items: baseline;
+}
+.navbar-nav {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float: none;
+}
+
+/* jumbotron */
+
+.jumbotron {
+    background-image: url("../assets/images/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fontsize {
+    font-size: 12px;
+    color: #fff;
+}
+.breadcrumb {
+    background-color: #f5f5f5;
+}
+
+.bar {
+    color: #ffffff;
+}
+
+.progress {
+    margin-bottom: 10px;
+}
+/* main */
+
+.sidenav {
+    height: 100%;
+    padding-left: 2%;
+}
+.border {
+    border: 1px solid #bbbbbb;
+    padding-bottom: 2%;
+}
+
+.card-header {
+    background: none;
+}
+
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.blognews {
+    border: 1px solid #bbbbbb;
+    padding-top: 2%;
+}
+/* footer */
+
+.page-footer {
+    background-color: #d9e5f4;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.progress .progress-bar {
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+@keyframes animateBar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hero__logo-plh {
+    align-items: center;
+    margin-bottom: 12px;
+
+    h2 {
+        color: #fff;
+    }
+}
+
+.media.border.p-3 {
+    margin-bottom: 28px;
+    border-radius: 6px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+//news ticker
+
+@keyframes ticker {
+    0% {
+        margin-top: 0;
+    }
+    25% {
+        margin-top: -30px;
+    }
+    50% {
+        margin-top: -60px;
+    }
+    75% {
+        margin-top: -90px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+.news {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 3px;
+
+    @include breakpoint(xs) {
+        display: none;
+    }
+}
+
+.news span {
+    float: left;
+    color: #fff;
+    background-color: #007bff;
+    padding: 6px;
+    position: relative;
+    top: 1%;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.news ul {
+    float: left;
+    padding-left: 20px;
+    animation: ticker 10s cubic-bezier(1, 0, 0.5, 0) infinite;
+}
+
+.news ul li {
+    line-height: 30px;
+    list-style: none;
+}
+
+.news ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.news ul:hover {
+    animation-play-state: paused;
+}
+.news span:hover + ul {
+    animation-play-state: paused;
+}

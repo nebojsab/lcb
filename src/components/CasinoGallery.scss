@@ -1,0 +1,70 @@
+.carousel.slide {
+    padding: 60px 100px;
+
+    @include breakpoint(sm) {
+        padding: 20px 70px 60px;
+    }
+
+    @include breakpoint(xs) {
+        padding: 10px 0px 60px;
+    }
+
+    .carousel-control-next-icon {
+        background-image: none;
+        border-right: 3px solid #333;
+        border-bottom: 3px solid #333;
+        transform: rotate(-45deg);
+        border-bottom-right-radius: 5px;
+        position: relative;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            transform: rotate(45deg);
+            left: -12px;
+            top: -12px;
+        }
+
+        @include breakpoint(xs) {
+            display: none;
+        }
+    }
+
+    .carousel-control-prev-icon {
+        background-image: none;
+        border-left: 3px solid #333;
+        border-bottom: 3px solid #333;
+        transform: rotate(45deg);
+        border-bottom-left-radius: 5px;
+        position: relative;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            transform: rotate(45deg);
+            left: -18px;
+            top: -12px;
+        }
+
+        @include breakpoint(xs) {
+            display: none;
+        }
+    }
+
+    .carousel-indicators li {
+        background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+    .carousel-indicators li.active {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+}

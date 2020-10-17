@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "bonuses": "SIGN UP BONUSES",
+        "percentage": "100%",
+        "code": "POKIES1",
+        "wr": "50XB",
+        "backText": "18+. Minimum deposit: €/$10. In the case of the Standard and VIP New Player Bonuses customers from the following countries must wager their deposit/transfer and bonus 50 times prior to making a withdrawal: Argentina, Belarus, Czech Republic, Hungary, India, ..."
+    },{
+        "id": 2,
+        "bonuses": "2nd DEPOSIT BONUSES",
+        "percentage": "50%",
+        "code": "POKIES2",
+        "wr": "40XB",
+        "backText": "18+. Minimum deposit: €/$10. In the case of the Standard and VIP New Player Bonuses customers from the following countries must wager their deposit/transfer and bonus 50 times prior to making a withdrawal: Argentina, Belarus, Czech Republic, Hungary, India, ..."
+    },{
+        "id": 3,
+        "bonuses": "3rd DEPOSIT BONUSES",
+        "percentage": "45%",
+        "code": "POKIES3",
+        "wr": "30XB",
+        "backText": "18+. Minimum deposit: €/$10. In the case of the Standard and VIP New Player Bonuses customers from the following countries must wager their deposit/transfer and bonus 50 times prior to making a withdrawal: Argentina, Belarus, Czech Republic, Hungary, India, ..."
+    },{
+        "id": 4,
+        "bonuses": "4th DEPOSIT BONUSES",
+        "percentage": "75%",
+        "code": "POKIES4",
+        "wr": "40XB",
+        "backText": "18+. Minimum deposit: €/$10. In the case of the Standard and VIP New Player Bonuses customers from the following countries must wager their deposit/transfer and bonus 50 times prior to making a withdrawal: Argentina, Belarus, Czech Republic, Hungary, India, ..."
+    }
+]
