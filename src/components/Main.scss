@@ -229,6 +229,12 @@ body .navbar-toggler {
     }
 }
 
+.abovenav {
+    @include breakpoint(xs) {
+        text-align: center;
+    }
+}
+
 .hero__logo-plh {
     align-items: center;
     margin-bottom: 12px;
@@ -236,7 +242,15 @@ body .navbar-toggler {
     h2 {
         color: #fff;
 
+        @include breakpoint(sm) {
+            text-align: center !important;
+        }
+
         @include breakpoint(xs) {
+            text-align: center !important;
+        }
+
+        @include breakpoint(md) {
             text-align: center !important;
         }
     }
