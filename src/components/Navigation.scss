@@ -1,0 +1,544 @@
+.news-ticker {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    @include breakpoint(xs) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include breakpoint(sm) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#breaking {
+    font-size: 15px;
+    padding: 5px;
+    background: #007bff;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    @include breakpoint(xs) {
+        width: 100%;
+        text-align: center;
+    }
+
+    @include breakpoint(sm) {
+        width: 100%;
+        text-align: center;
+    }
+}
+#breaking,
+#newsTicker {
+    border: none;
+}
+#newsTicker {
+    position: absolute;
+    width: 100%;
+    background-color: aliceblue;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 998;
+
+    @include breakpoint(xs) {
+        top: 33px;
+    }
+
+    @include breakpoint(sm) {
+        top: 33px;
+    }
+}
+.date {
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.story {
+    margin-right: 20px;
+}
+#newsTicker p {
+    margin: 0;
+    display: inline-block;
+    font-size: 15px;
+    padding-left: 100%;
+    animation: tickerTape 60s linear infinite;
+}
+@keyframes tickerTape {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.header {
+    display: block;
+    width: 100%;
+    background-color: #121424;
+    padding-bottom: 10px;
+}
+
+.header__inner {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__banner img {
+    width: 100%;
+    max-width: 450px;
+    min-width: 150px;
+}
+
+.header__ctas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+.header__ctas p {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header__input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-right: 28px;
+    outline: none;
+    outline: 0;
+
+    @include breakpoint(xs) {
+        margin-right: 0;
+    }
+}
+
+.header__subscribe {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.button--blue {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+.subscribe__input {
+    width: 100%;
+    padding: 7px;
+    border: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.sub-nav {
+    background-color: #d9e5f4;
+    width: 100%;
+}
+
+.sub-nav__list {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    max-width: 1140px;
+    padding: 5px 0 10px;
+    margin: 0 auto;
+
+    @include breakpoint(xs) {
+        flex-wrap: wrap;
+        padding: 5 10px 10px;
+    }
+
+    @include breakpoint(sm) {
+        flex-wrap: wrap;
+        padding: 5 10px 10px;
+    }
+}
+
+.sub-nav__item {
+    padding: 6px;
+}
+
+.sub-nav__item a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #00aeef;
+}
+
+.nav {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 auto;
+    padding: 10px 0 5px;
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+        position: fixed;
+        width: 250px;
+        left: -250px;
+        top: 0;
+        transition: all ease-in-out 0.3s;
+        padding: 28px;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    @include breakpoint(sm) {
+        flex-direction: column;
+        position: fixed;
+        width: 250px;
+        left: -250px;
+        top: 0;
+        transition: all ease-in-out 0.3s;
+        padding: 28px;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    &.is-visible {
+        @include breakpoint(xs) {
+            width: 100%;
+            box-shadow: 0 2px 4px #ddd;
+            left: 0;
+            transition: all ease-in-out 0.3s;
+        }
+
+        @include breakpoint(sm) {
+            width: 100%;
+            box-shadow: 0 2px 4px #ddd;
+            left: 0;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}
+
+.nav__menu--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 21px;
+    height: 21px;
+    display: none;
+    transform: rotate(45deg);
+    opacity: 0.4;
+    cursor: pointer;
+
+    @include breakpoint(xs) {
+        display: block;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 21px;
+            height: 1px;
+            top: 10px;
+            background-color: #333;
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 1px;
+            height: 21px;
+            left: 10px;
+            background-color: #333;
+        }
+    }
+
+    @include breakpoint(sm) {
+        display: block;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 21px;
+            height: 1px;
+            top: 10px;
+            background-color: #333;
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 1px;
+            height: 21px;
+            left: 10px;
+            background-color: #333;
+        }
+    }
+}
+
+.nav__list {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include breakpoint(xs) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include breakpoint(sm) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.nav__item {
+    padding: 6px;
+
+    @include breakpoint(xs) {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #c1c1c1;
+    }
+
+    @include breakpoint(sm) {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #c1c1c1;
+    }
+}
+
+.nav__item a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #76797c;
+}
+
+.nav__form {
+    position: relative;
+
+    @include breakpoint(xs) {
+        width: 100%;
+        margin: 28px 0;
+    }
+
+    @include breakpoint(sm) {
+        width: 100%;
+        margin: 28px 0;
+    }
+}
+
+.nav__input--ico {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    cursor: pointer;
+
+    &::before {
+        display: block;
+        content: "";
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        right: 10px;
+        top: 1px;
+        border-radius: 100%;
+        border: 2px solid #c1c1c1;
+        z-index: 1;
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        width: 6px;
+        height: 2px;
+        background-color: #c1c1c1;
+        position: absolute;
+        right: 21px;
+        top: 15px;
+        border-radius: 100%;
+        transform: rotate(-45deg);
+        z-index: 1;
+    }
+}
+
+.nav__input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #76797c;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    z-index: 0;
+}
+
+//nav burger
+
+.nav-burger {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    width: 30px;
+
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     width: 40px;
+    //     height: 40px;
+    //     top: 15px;
+    //     left: 17px;
+    //     transition: all 0.5s;
+    // }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 32%;
+        top: 44%;
+        border-radius: 100%;
+        transition: all 0.5s;
+    }
+
+    .icon-bar {
+        background: #fff;
+        width: 16px;
+        height: 1px;
+        display: block;
+        transition: all 0.2s;
+        margin: 5px 3px;
+        transition: all 0.5s;
+
+        @include breakpoint(sm) {
+            background: #333;
+        }
+    }
+
+    .top-bar {
+        transform: rotate(0);
+        transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+        opacity: 1;
+        width: 16px;
+        position: relative;
+    }
+
+    .bottom-bar {
+        transform: rotate(0);
+        transform-origin: 10% 90%;
+    }
+
+    &.is-clicked {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: -29%;
+            top: -33%;
+            transition: all 0.5s;
+        }
+
+        .icon-bar {
+            background: #fff;
+            position: relative;
+            z-index: 1;
+
+            @include breakpoint(sm) {
+                background: #333;
+            }
+        }
+
+        .top-bar {
+            transform: rotate(45deg);
+            transform-origin: 10% 10%;
+            width: 22px;
+        }
+
+        .middle-bar {
+            opacity: 0;
+        }
+
+        .bottom-bar {
+            transform: rotate(-45deg);
+            transform-origin: 10% 90%;
+            width: 22px;
+        }
+    }
+
+    @include breakpoint(xs) {
+        display: block;
+        top: 20px;
+        left: 20px;
+    }
+
+    @include breakpoint(sm) {
+        display: block;
+        display: block;
+        top: 107px;
+        right: 10px;
+    }
+}

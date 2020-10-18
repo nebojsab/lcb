@@ -16,4 +16,19 @@
 <body>
     <div id="app"></div>
 </body>
+<script>
+    let news = [
+  "Wazdan unleashes the second slot from the Power of Gods series: Power of Gods: Egypt",
+  "Oryx Gaming to leverage Iforium network of operators via new content supply deal",
+  "Las Vegas Raiders offer to host Super Bowl LVIII",
+  "IGT signs new sports betting deal with NBA"
+];
+
+for (i = 0; i < news.length; i++) {
+  $("#newsTicker p").append(
+    "<span class='date'>2/10/2020:</span>" +
+    "<span class='story'>" + news[i] + "</span>"
+  );
+}
+</script>
 </html>

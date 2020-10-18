@@ -54,8 +54,6 @@ a:hover {
 }
 
 .nav {
-    flex-direction: row-reverse;
-
     @include breakpoint(xs) {
         flex-direction: row;
     }
@@ -149,6 +147,14 @@ body .navbar-toggler {
     background-image: url("../assets/images/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include breakpoint(xs) {
+        margin-top: 60px;
+    }
+
+    @include breakpoint(sm) {
+        margin-top: 60px;
+    }
 }
 
 .fontsize {
@@ -252,6 +258,32 @@ body .navbar-toggler {
 
         @include breakpoint(md) {
             text-align: center !important;
+        }
+    }
+}
+
+.below__logo-plh {
+    @include breakpoint(sm) {
+        flex-direction: column;
+
+        .col-sm-6,
+        .col-sm-5 {
+            width: 100%;
+            flex: 100%;
+            max-width: unset;
+            margin-bottom: 12px;
+        }
+    }
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+
+        .col-sm-6,
+        .col-sm-5 {
+            width: 100%;
+            flex: 100%;
+            max-width: unset;
+            margin-bottom: 12px;
         }
     }
 }
