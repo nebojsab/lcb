@@ -21,11 +21,6 @@ class Header extends React.Component {
     }
     return (
       <Fragment>
-        {/*  */}
-
-        {/**/}
-
-        {/**/}
         <div className="jumbotron text-center">
           <div className="container">
             <div className="row">
@@ -95,13 +90,6 @@ class Header extends React.Component {
             </div>
           </div>
         </div>
-        {/**/}
-
-        {/**/}
-
-        {/**/}
-
-        {/**/}
       </Fragment>
     )
   }

@@ -147,13 +147,22 @@ body .navbar-toggler {
     background-image: url("../assets/images/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 32px;
 
     @include breakpoint(xs) {
         margin-top: 60px;
+
+        .col-sm-5 {
+            padding: 0;
+        }
     }
 
     @include breakpoint(sm) {
         margin-top: 60px;
+
+        .col-sm-5 {
+            padding: 0;
+        }
     }
 }
 
@@ -245,6 +254,13 @@ body .navbar-toggler {
     align-items: center;
     margin-bottom: 12px;
 
+    @include breakpoint(xs) {
+        .row {
+            margin-left: unset;
+            margin-right: unset;
+        }
+    }
+
     h2 {
         color: #fff;
 
@@ -277,6 +293,11 @@ body .navbar-toggler {
 
     @include breakpoint(xs) {
         flex-direction: column;
+
+        .row {
+            margin-left: unset;
+            margin-right: unset;
+        }
 
         .col-sm-6,
         .col-sm-5 {
@@ -383,4 +404,8 @@ body .navbar-toggler {
 }
 .news span:hover + ul {
     animation-play-state: paused;
+}
+
+.table.table-bordered {
+    font-size: 12px;
 }
